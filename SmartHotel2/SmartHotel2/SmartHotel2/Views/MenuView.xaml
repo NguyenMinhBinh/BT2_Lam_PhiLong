@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHotel2.Views.MenuView">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="8*" />
+                </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="avatar.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <BoxView BackgroundColor="Black" Opacity="0.6" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+                <Label Margin="0,0,0,20" Font="20,Bold" TextColor="White" Text="Hello ! Long" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="End" />
+                    <Image Source="rating.png" Grid.Row="1" Grid.Column="0"  HorizontalOptions="End" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onBookTap" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Font="20,Bold" TextColor="Black" Text="Book a room" Grid.Row="1" Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onBookTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Image Source="rating.png" Grid.Row="2" Grid.Column="0"  HorizontalOptions="End">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onMyRoomTap" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Font="20,Bold" TextColor="Black" Text="My room" Grid.Row="2" Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onMyRoomTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Image Source="rating.png" Grid.Row="3" Grid.Column="0"  HorizontalOptions="End">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onSuggesstionTap" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Font="20,Bold" TextColor="Black" Text="Suggesstions" Grid.Row="3" Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onSuggesstionTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Image Source="rating.png" Grid.Row="4" Grid.Column="0"  HorizontalOptions="End">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onConciergeTap" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Font="20,Bold" TextColor="Black" Text="Concierge" Grid.Row="4" Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onConciergeTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Image Source="rating.png" Grid.Row="5" Grid.Column="0"  HorizontalOptions="End" >
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onLoginTap" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Font="20,Bold" TextColor="Black" Text="Log in" Grid.Row="5" Grid.Column="1"  HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="onLoginTap" />
+                        </Label.GestureRecognizers>
+                    </Label> 
+              
+                <!--<Label Font="20,Bold" TextColor="Black" Text="Room" Grid.Row="2" Grid.Column="2"  HorizontalOptions="Start" />-->
+            </Grid>
+            <ActivityIndicator HeightRequest="20" WidthRequest="20" IsRunning="True" IsVisible="False" />
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

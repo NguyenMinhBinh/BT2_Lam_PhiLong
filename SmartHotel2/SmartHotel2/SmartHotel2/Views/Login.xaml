@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHotel2.Views.Login">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TextColor">Pink</Color>
+            <Color x:Key="Placeholder">Blue</Color>
+            <Style x:Key="MyTextStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="Placeholder" Value="{StaticResource Placeholder}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="6*" />
+             
+        </Grid.RowDefinitions>
+        <Image Source="img_header_background_1" Aspect="Fill" />
+        <Grid Padding="40,10,40,40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="18" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="18" />
+            <RowDefinition Height="Auto" />
+                <RowDefinition Height="18" />
+        </Grid.RowDefinitions>  
+     
+            <Image Source="logo_splash" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Label  Grid.Row="1" Text="Username" TextColor="{StaticResource TextColor}" />
+
+            <Entry  Grid.Row="2" Style="{StaticResource MyTextStyle}" Placeholder="Username" x:Name="Username" />
+
+
+            <Label  Grid.Row="3" Text="Password" TextColor="{StaticResource TextColor}" />
+
+            <Entry  Grid.Row="4" Style="{StaticResource MyTextStyle}" IsPassword="True" Placeholder="Password" x:Name="Password" />
+            <Label  Grid.Row="5" Text="Forgot Password" TextColor="{StaticResource TextColor}" HorizontalOptions="End" />
+
+
+        </Grid>
+        <Button VerticalOptions="Start" BackgroundColor="White" Text="Sign In" Grid.Row="1" Margin="30,-30, 30, 0" HeightRequest="60" Clicked="SignIn_Click" />
+        
+    </Grid>
+</ContentPage>
